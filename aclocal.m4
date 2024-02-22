@@ -234,6 +234,7 @@ dnl pointless, but it might come in handy later.  an accidental feature.
 				  /usr/local/opt/readline/lib \
 				  /usr/lib \
 				  /usr/lib64 \
+				  /usr/lib/x86_64-linux-gnu \
 				  ; do
 			  for j in ${i} \
 					   `ls -dr ${i}/readline[[0-9]]* 2>/dev/null`  \

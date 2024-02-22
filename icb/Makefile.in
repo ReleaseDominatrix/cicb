@@ -87,16 +87,16 @@ icb: $(OBJ) Makefile
 install: $(BINDIR)/icb $(DATADIR)/icbserverdb $(DATADIR)/system.icbrc
 
 $(DATADIR)/icbserverdb: $(top_srcdir)/icbserverdb
-	-mkdir $(DATADIR)
+	-mkdir -p $(DATADIR)
 	$(install_sh) -c -o 0 -g 0 -m 0644 $(top_srcdir)/icbserverdb $(DATADIR)/icbserverdb
 
 $(BINDIR)/icb: icb
-	-mkdir $(BINDIR)
+	-mkdir -p $(BINDIR)
 	-rm -f $(BINDIR)/icb
-	$(install_sh) -c -o 0 -g 0 -m 0755 -s icb $(BINDIR)
+	$(install_sh) -c -o 0 -g 0 -m 0755 -s icb $(BINDIR)/icb
 
 $(DATADIR)/system.icbrc: $(top_srcdir)/system.icbrc
-	-mkdir $(DATADIR)
+	-mkdir -p $(DATADIR)
 	$(install_sh) -c -o 0 -g 0 -m 0644 $(top_srcdir)/system.icbrc $(DATADIR)/system.icbrc
 
 clean:

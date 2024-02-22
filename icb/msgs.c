@@ -433,7 +433,7 @@ statusmsg(char *pkt)
     }
 
     if (!strcmp(fields[0], "Name")) {
-        char nick[13], newnick[13];
+        char nick[MAX_NICKLEN + 1], newnick[MAX_NICKLEN + 1];
 
         if (sscanf(fields[1],
                    " %s changed nickname to %s",
